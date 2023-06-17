@@ -1,0 +1,14 @@
+.item {
+    .link {
+        font-family: 'SB Sans Interface';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        text-decoration: none;
+        color: #5558FA;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

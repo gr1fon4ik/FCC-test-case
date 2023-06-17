@@ -1,0 +1,29 @@
+.item {
+    width: 650px;
+    height: 48px;
+    margin-top: 62px;
+
+    .progressLine {
+        display: flex;
+        flex-direction: row;
+        
+        .lineLeft {
+            margin-left: 110px;
+            height: 8px;
+            width: 100px;
+            border-radius: 8px;
+            max-width: 45%;
+            background: rgba(0, 0, 0, 0.08);
+
+        }
+
+        .lineRight {
+            margin-right: 110px;
+            height: 8px;
+            border-radius: 8px;
+            max-width: 45%;
+            background: rgba(0, 0, 0, 0.08);
+        }
+    }
+
+}
