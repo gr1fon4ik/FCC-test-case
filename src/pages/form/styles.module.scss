@@ -1,0 +1,307 @@
+.formStep1 {
+    width: 100%;
+    padding: 30px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+
+    .inputMaster {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-top: 24px;
+
+        .label {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .inputArea {
+            margin: 8px 8px;
+            width: 300px;
+            height: 44px;
+            border: 1px solid rgba(0, 0, 0, 0.16);
+            border-radius: 4px;
+            background: #FFFFFF;
+            padding-left: 12px;
+        }
+
+        .tip {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.48);
+
+        }
+    }
+
+    .selectMaster {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-top: 24px;
+
+        .label {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+
+        }
+
+        .selectArea {
+            margin-top: 8px;
+            width: 300px;
+            height: 44px;
+            padding: 12px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.16);
+            border-radius: 4px;
+        }
+
+        .option {
+            padding: 12px 12px 0px 12px;
+            width: 300px;
+            height: 40px;
+        }
+    }
+
+
+    .buttonBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 88px;
+        width: 692px;
+
+        .backButton {
+            width: 73px;
+            height: 44px;
+            padding: 12px 16px;
+            background: #FFFFFF;
+            border: 1.5px solid #5558FA;
+            border-radius: 4px;
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #5558FA;
+        }
+
+        .nextButton {
+
+            width: 73px;
+            height: 44px;
+            padding: 12px 16px;
+            background: #5558FA;
+            border-radius: 4px;
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+    }
+
+}
+
+.formStep2 {
+    width: 100%;
+    padding: 30px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+
+    .advantagesMaster {
+        .label {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .inputArea {
+            margin-top: 8px;
+            width: 300px;
+            height: 44px;
+            padding-left: 12px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.16);
+            border-radius: 4px;
+
+        }
+
+        .binIcon {
+            margin-left: 18.5px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .newAreaButton {
+            margin-top: 8px;
+            width: 20px;
+            height: 20px;
+            padding: 12px;
+            border: 1.5px solid #5558FA;
+            border-radius: 4px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+
+    .checkboxGroup {
+        display: flex;
+        flex-direction: row;
+
+        .label {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+        }
+    }
+
+    .radioGroup {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .label {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+        }
+    }
+
+    //Доделать
+
+    .buttonBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 88px;
+        width: 692px;
+
+        .backButton {
+            width: 73px;
+            height: 44px;
+            padding: 12px 16px;
+            background: #FFFFFF;
+            border: 1.5px solid #5558FA;
+            border-radius: 4px;
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #5558FA;
+        }
+
+        .nextButton {
+
+            width: 73px;
+            height: 44px;
+            padding: 12px 16px;
+            background: #5558FA;
+            border-radius: 4px;
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+    }
+
+}
+
+.formStep3 {
+    width: 100%;
+    padding: 30px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+
+    .aboutMaster {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+        .label {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .aboutInput {
+            width: 680px;
+            height: 84px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.16);
+            border-radius: 4px;
+
+        }
+
+        .tip {
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.48);
+
+        }
+    }
+
+    .buttonBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 88px;
+        width: 681px;
+
+        .backButton {
+            width: 73px;
+            height: 44px;
+            padding: 12px 16px;
+            background: #FFFFFF;
+            border: 1.5px solid #5558FA;
+            border-radius: 4px;
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #5558FA;
+        }
+
+        .sendButton {
+            width: 103px;
+            height: 44px;
+            padding: 12px 16px;
+            background: #5558FA;
+            border-radius: 4px;
+            font-family: 'SB Sans Interface';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFF;
+
+        }
+    }
+}

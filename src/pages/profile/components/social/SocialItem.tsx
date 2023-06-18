@@ -11,7 +11,7 @@ type SocialPropsTypes = {
 const SocialItem = (props:SocialPropsTypes) => {
     return (
         <div className={styles.item}>
-            <img src={socials}></img>
+            <img src={socials} className={styles.icon}></img>
             <a href={props.href} className={styles.link}>{props.link}</a>
         </div>
     );

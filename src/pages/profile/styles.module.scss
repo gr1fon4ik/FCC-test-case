@@ -78,27 +78,6 @@
 
             .contactInfoContainer {}
 
-            .startButton {
-                width: 79px;
-                height: 44px;
-                padding: 12px 16px;
-                background-color: #5558FA;
-                margin-top: 48px;
-                width: 79px;
-                height: 44px;
-                border-radius: 4px;
-
-                color: #FFFFFF;
-                font-family: 'SB Sans Interface';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 14px;
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-
         }
     }
 }
