@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss"
 import deleteicon from "../../assets/icons/Delete.svg"
 import plusicon from "../../assets/icons/Plus.svg"
+import Modal from "../../components/modal/Modal.tsx";
 
 const state = {
-    step: 1,
-    counter: 0
+    step: 1
 }
 
 enum Gender {
@@ -41,7 +41,7 @@ function BigForm() {
     const letterCounter = (value) => {
         var count = value.split(" ").join("").length;
         console.log(count)
-        state.counter = count;
+        document.querySelector('output').textContent=count;//useref
     };
 
     const navigate = useNavigate();
@@ -75,6 +75,17 @@ function BigForm() {
         state.step += 1;
     };
 
+    const [modalActive, setModalActive] = useState(true);
+
+    const modalOpener = (fail) => {
+        fail=0
+        return (
+            fail === 0 ?
+                <Modal active={modalActive} setActive={setModalActive} fail={fail}/> :
+                <Modal active={modalActive} setActive={setModalActive} fail={1}/>
+        )
+    }
+
     if (state.step === 1) {
         return (
             <form className={styles.formStep1} onSubmit={handleSubmit(onSubmit)}>
@@ -82,14 +93,14 @@ function BigForm() {
                 <div className={styles.inputMaster}>
                     <label className={styles.label}>Nickname</label>
                     <input
-                        type="text"
                         placeholder="Nickname"
                         className={styles.inputArea}
                         id="field-nickname"
                         {...register("Nickname",
                             {
                                 required: 'Поле не заполнено',
-                                maxLength: 30
+                                maxLength: 30,
+                                pattern: /[^!@#$%^&*()_]/
                             })}
                     />
                     <div className={styles.tip}>Tip</div>
@@ -106,7 +117,8 @@ function BigForm() {
                         {...register("Name",
                             {
                                 required: 'Поле не заполнено',
-                                maxLength: 50
+                                maxLength: 50,
+                                pattern: /[A-Za-z]/
                             })}
                     />
                     <div className={styles.tip}>Tip</div>
@@ -135,6 +147,7 @@ function BigForm() {
                         className={styles.selectArea}
                         id="field-sex"
                         {...register("sex")}>
+                        <option value="" disabled selected hidden>Не выбрано</option>
                         <option className={styles.option} value="man">female</option>
                         <option className={styles.option} value="woman">male</option>
                     </select>
@@ -205,12 +218,14 @@ function BigForm() {
                             letterCounter(value)
                         }}
                     />
+                    <output className={styles.counter} >0</output>
                     <div className={styles.tip}>Tip</div>
                 </div>
                 <div className={styles.buttonBox}>
                     <button className={styles.backButton} id="button-back" onClick={previousStep}>Назад</button>
-                    <button className={styles.sendButton} id="button-send"  >Отправить</button>
+                    <button className={styles.sendButton} id="button-send" onClick={modalOpener} >Отправить</button>
                 </div>
+                {/*<Modal active={modalActive} setActive={setModalActive} />*/}
             </form>
         )
     }

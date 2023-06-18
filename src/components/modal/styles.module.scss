@@ -20,18 +20,45 @@
 
         .modalHeader {
             margin-top: 32px;
-
             font-family: 'SB Sans Interface';
             font-style: normal;
             font-weight: 600;
             font-size: 20px;
         }
 
+        .headerContainer {
+            display: flex;
+            justify-content: space-between;
+            width: 460px;
+
+            .modalHeader {
+                margin-top: 32px;
+                margin-left: 32px;
+                font-family: 'SB Sans Interface';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            .closeIcon {
+                margin-top: 32px;
+                margin-right: 32px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+
         .modalContainer {
             margin-top: 24px;
             height: 132px;
-            
-            .iconDecor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .iconDecorSucces {
                 width: 80px;
                 height: 80px;
                 background-color: rgba(5, 174, 113, 0.15);
@@ -41,10 +68,30 @@
                 justify-content: center;
                 align-items: center;
 
-                .icon {
+                .iconSucces {
                     width: 48px;
                     height: 48px;
                     background-color: #05AE71;
+                    border-radius: 100px;
+
+                }
+            }
+
+            .iconDecorCancel {
+                width: 80px;
+                height: 80px;
+                background: rgba(232, 78, 88, 0.15);
+                border-radius: 100px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .iconCancel {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 100px;
+
                 }
             }
         }
@@ -54,6 +101,25 @@
 
             .toMainButton {
                 width: 109px;
+                height: 44px;
+                background: #5558FA;
+                border-radius: 4px;
+
+                color: #FFFFFF;
+                font-family: 'SB Sans Interface';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .closeButton {
+                margin-left: 340px ;
+                margin-right: 32px ;
+                width: 88px;
                 height: 44px;
                 background: #5558FA;
                 border-radius: 4px;

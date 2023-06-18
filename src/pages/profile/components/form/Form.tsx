@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 import styles from "./styles.module.scss"
 
-
 interface FormInput {
     PhoneNumber: string;
     Email: string;
@@ -62,7 +61,13 @@ function Form() {
                     placeholder="Email"
                     className={styles.inputArea}
                     {...register("Email",
-                        { required: 'Поле не заполнено' })}
+                        {
+                            required: 'Поле не заполнено',
+                            pattern: {
+                                value: /\S+@\S+\.\S+/,
+                                message: "Entered value does not match email format"
+                            }
+                        })}
                 />
             </div>
             <button className={styles.startButton} id="button-start" type="submit" >Начать</button>

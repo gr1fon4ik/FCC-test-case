@@ -10,7 +10,7 @@ import Form from "./components/form/Form.tsx";
 
 const ProfilePage = () => {
 
-    const [modalActive, setModalActive] = useState(true);
+    
 
     const SocialElements = socialData.map((item) => (
         <SocialItem href={item.href} link={item.link} />
