@@ -6,20 +6,39 @@
     .progressLine {
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 0px;
         
-        .progressdot1{
-            margin-left: 110px;
+        .progressdot{
             display: flex;
             align-items: center;
             width: 16px;
             height: 16px;
             border-radius: 100px;
             background-color: #A6A6A6;
-
+            z-index: 1;
         }
-        .lineLeft {
-            margin-left: 0;
+        .progressdotActive{
+            display: flex;
+            align-items: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 100px;
+            background-color: #5558FA;
+            z-index: 1;
+        }
+        .progressdotCheck{
+            display: flex;
+            align-items: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 100px;
+            background-color: #5558FA;
+            z-index: 1;
+        }
+        .line{
+            margin: 0 -10px 0 -10px;
+            padding: 0 10px 0 10px;
             height: 8px;
             width: 50%;
             border-radius: 8px;
@@ -27,33 +46,15 @@
             background: rgba(0, 0, 0, 0.08);
 
         }
-
-        .progressdot2{
-            display: flex;
-            align-items: center;
-            width: 16px;
-            height: 16px;
-            border-radius: 100px;
-            background-color: #5558FA;;
-        }
-
-        .lineRight {
-            margin-right: 0;
+        .lineActive{
+            margin: 0 -10px 0 -10px;
+            padding: 0 10px 0 10px;
             height: 8px;
             width: 50%;
             border-radius: 8px;
             max-width: 50%;
-            background: rgba(0, 0, 0, 0.08);
-        }
+            background-color: #5558FA;
 
-        .progressdot3{
-            margin-right: 110px;
-            display: flex;
-            align-items: center;
-            width: 16px;
-            height: 16px;
-            border-radius: 100px;
-            background-color: #5558FA;;
         }
     }
 

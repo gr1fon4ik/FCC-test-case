@@ -1,57 +1,41 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom";
+import InputMask from 'react-input-mask';
 
 import styles from "./styles.module.scss"
-
-interface FormInput {
-    PhoneNumber: string;
-    Email: string;
-};
-
-const maskPhone = (value) => {
-    var maskedValue = "+7 (___) ___-__-__",
-        i = 0;
-    for (i = 0; value.lenght; i++) {
-
-    }
-    return maskedValue
-};
+import { StateContext, StateType } from "../../../../App.tsx";
 
 function Form() {
-    const { register, handleSubmit, formState: { errors }, formState } = useForm<FormInput>({
-        mode: 'onBlur'
+    const { state, setState } = useContext(StateContext)
+    const { register, handleSubmit, formState: { errors }, formState } = useForm<StateType['mainPage']>({
+        mode: 'onBlur',
+        defaultValues: state.mainPage
+        
     });
-
     const navigate = useNavigate();
 
     const onSubmit = data => {
-        console.log(data);
+        setState({
+            ...state,
+            mainPage: { ...data }
+        })
+
         navigate("/create", { replace: true })
     };
-
-    console.log(errors, formState);
-
+    console.log(state.mainPage)
     return (
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.inputMaster}>
                 <label className={styles.label}>Номер телефона</label>
-                <input
-                    type="number"
+                <InputMask
                     placeholder="+7 (000) 000-00-00"
                     className={styles.inputArea}
-
-
-                    {...register("PhoneNumber",
+                    mask="+7 (999) 999-99-99"
+                    {...register("phoneNumber",
                         {
-                            required: 'Поле не заполнено',
-                            valueAsNumber: true,
+                            required: 'Поле не заполнено'
                         })}
-
-                /*onChange={(e)=>{
-                   const value =e.target
-                   e.target.value= maskPhone(value)
-               }}*/
                 />
             </div>
             <div className={styles.inputMaster}>
@@ -60,7 +44,7 @@ function Form() {
                     type="text"
                     placeholder="Email"
                     className={styles.inputArea}
-                    {...register("Email",
+                    {...register("email",
                         {
                             required: 'Поле не заполнено',
                             pattern: {

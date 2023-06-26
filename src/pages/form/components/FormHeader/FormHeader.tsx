@@ -13,11 +13,11 @@ const FormHeader = (props: HeadetPropsTypes) => {
     return (
         <div className={styles.item}>
             <div className={styles.progressLine}>
-                <div className={styles.progressdot1}><img src={dot}/></div>
-                <hr className={styles.lineLeft} /> 
-                <div className={styles.progressdot2}><img src={check}/></div>
-                <hr className={styles.lineRight} />
-                <div className={styles.progressdot3}><img src={check}/></div>
+                <div className={styles.progressdot}><img src={dot}/></div>
+                <hr className={styles.line} /> 
+                <div className={styles.progressdot}><img src={check}/></div>
+                <hr className={styles.line} />
+                <div className={styles.progressdot}><img src={check}/></div>
             </div>
         </div>
     )
