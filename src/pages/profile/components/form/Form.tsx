@@ -20,10 +20,8 @@ function Form() {
             ...state,
             mainPage: { ...data }
         })
-
         navigate("/create", { replace: true })
     };
-    console.log(state.mainPage)
     return (
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.inputMaster}>

@@ -9,7 +9,7 @@ const Step1 = (props) => {
     const { state, setState } = useContext(StateContext);
 
     const { register, handleSubmit, formState: { errors }, formState } = useForm<StateType['step1']>({
-        mode: 'onBlur',
+        mode: 'onChange',
         defaultValues: state.step1
     });
 
@@ -37,7 +37,10 @@ const Step1 = (props) => {
                         {
                             required: 'Поле не заполнено',
                             maxLength: 30,
-                            pattern: /[^!@#$%^&*()_]/
+                            pattern: {
+                                value:/^[A-Za-z0-9]+$/g, 
+                                message:"Только буквы и цифры без спецсимволов"
+                            }
                         })}
                 />
                 <div className={styles.tip}>Tip
@@ -57,7 +60,10 @@ const Step1 = (props) => {
                         {
                             required: 'Поле не заполнено',
                             maxLength: 50,
-                            pattern: /[A-Za-z]/
+                            pattern: {
+                                value:/^[A-Za-z]+$/,
+                                message:"Только буквы"
+                            }
                         })}
                 />
                 <div className={styles.tip}>Tip
@@ -76,7 +82,11 @@ const Step1 = (props) => {
                     {...register("surname",
                         {
                             required: 'Поле не заполнено',
-                            maxLength: 50
+                            maxLength: 50,
+                            pattern: {
+                                value:/^[A-Za-z]+$/,
+                                message:"Только буквы"
+                            }
                         })}
                 />
                 <div className={styles.tip}>Tip

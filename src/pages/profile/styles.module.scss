@@ -1,8 +1,6 @@
 .wrapper {
     width: 100%;
     padding: 30px 32px;
-    display: flex;
-    justify-content: center;
 
     .profilePage {
         width: 100%;
@@ -10,9 +8,11 @@
         background-color: #FFFFFF;
 
 
+
         .content {
             display: flex;
             flex-direction: column;
+            align-items: center;
             
             .profileHeader{
                 display: flex;

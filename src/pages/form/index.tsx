@@ -1,6 +1,4 @@
 import React, { useState, useContext } from "react";
-import { useFieldArray, useForm } from "react-hook-form"
-import FormHeader from "./components/FormHeader/FormHeader.tsx";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./styles.module.scss"
@@ -26,9 +24,9 @@ function BigForm() {
         setStep(step+1);
     };
 
-    const [modalActive, setModalActive] = useState(true);
 
     const collectData=()=>{
+        let textArr=Object.values(state.step2.text)
         const newData={...state.mainPage, ...state.step1, ...state.step2, ...state.step3};
         return newData;
     }
@@ -43,7 +41,7 @@ function BigForm() {
     }
 
     return(
-        <div>
+        <div className={styles.wrapper}>
             {step === 1?<Step1 step={step} previousStep={previousStep} nextStep={nextStep}/>:
              step === 2?<Step2 step={step} previousStep={previousStep} nextStep={nextStep} />:
              <Step3 step={step} previousStep={previousStep} sendForm={sendForm}/>}

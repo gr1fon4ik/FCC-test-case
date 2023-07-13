@@ -44,16 +44,16 @@ type ContextType = {
 export const StateContext = React.createContext<ContextType>({} as ContextType);
 
 function App() {
-  
 
-  const [state, setState] = useState<StateType>({step2:{text:  [{ value: '' }]},modal:{active:false}} as StateType);
-  
+
+  const [state, setState] = useState<StateType>({ step2: { text: [{ value: '' }] }, modal: { active: false } } as StateType);
+
   return (
     <StateContext.Provider value={{ state, setState }}>
-      <Routes>
-        <Route path="/" element={<ProfilePage />}></Route>
-        <Route path="/create" element={<BigForm />}></Route>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<ProfilePage />}></Route>
+          <Route path="/create" element={<BigForm />}></Route>
+        </Routes>
     </StateContext.Provider>
   );
 }
