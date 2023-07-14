@@ -1,0 +1,83 @@
+.wrapper {
+    width: 100%;
+    padding: 30px 32px;
+
+    .profilePage {
+        width: 100%;
+        max-width: 2000px;
+        background-color: #FFFFFF;
+
+
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .profileHeader{
+                display: flex;
+                gap: 24px;
+
+                .nameBox {
+                    margin-top: 25px;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 100px;
+                    background-color: #D5E4F7;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    .text {
+    
+                        font-family: 'SB Sans Text Mono';
+                        font-size: 40px;
+                        font-weight: 400;
+                    }
+                }
+    
+                .infoContainer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 8px;
+    
+                    margin-top: 38px;
+                    width: 228px;
+                    height: 50px;
+    
+                    .name {
+                        height: 26px;
+                        font-family: 'SB Sans Interface';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+    
+                    .socialsContainer {
+                        height: 16px;
+                        margin-top: 8px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        gap: 16px;
+                    }
+    
+                }
+            }
+                       
+
+            .line {
+
+                width: 100%;
+                margin-top:41px ;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .contactInfoContainer {}
+
+        }
+    }
+}
