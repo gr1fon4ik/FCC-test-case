@@ -7,7 +7,6 @@ import BigForm from "./pages/form/index.tsx";
 enum Gender {
   man = "man",
   woman = "woman"
-
 }
 
 export type StateType = {
