@@ -26,8 +26,8 @@ function BigForm() {
 
 
     const collectData=()=>{
-        let textArr=Object.values(state.step2.text)
-        const newData={...state.mainPage, ...state.step1, ...state.step2, ...state.step3};
+        let textArr=state.step2.text.map((item)=>(item.value))
+        const newData={...state.mainPage, ...state.step1, ...state.step2,text:textArr, ...state.step3};
         return newData;
     }
 
