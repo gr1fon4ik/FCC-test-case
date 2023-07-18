@@ -1,22 +1,23 @@
 import React from "react";
-import styles from "./styles.module.scss"
 
 import {Dot,Check,Line} from "./components/CheckLineComps.tsx"
+
+import styles from "./styles.module.scss"
 
 type HeadetPropsTypes = {
     step: number;
 
 };
 
-const FormHeader = (props: HeadetPropsTypes) => {
+const FormHeader = ({step}: HeadetPropsTypes) => {
     return (
         <div className={styles.item}>
             <div className={styles.progressLine}>
-                {props.step ===1 ? <Dot active ={true}/>: <Check/>}
-                <Line active ={props.step>1}/>
-                {props.step <= 2 ? <Dot active={props.step === 2}/>: <Check/>}
-                <Line active ={props.step>2}/>
-                {props.step <= 3 ? <Dot active={props.step === 3}/>: <Check/>}
+                {step ===1 ? <Dot active ={true}/>: <Check/>}
+                <Line active ={step>1}/>
+                {step <= 2 ? <Dot active={step === 2}/>: <Check/>}
+                <Line active ={step>2}/>
+                {step <= 3 ? <Dot active={step === 3}/>: <Check/>}
             </div>
         </div>
     )

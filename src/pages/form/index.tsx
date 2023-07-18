@@ -36,7 +36,7 @@ function BigForm() {
         console.log(data)
         setStep(1);
         setState({...state,
-        modal:{active:true,error:0}});
+        modal:{active:true,error:1}});
 
     }
 

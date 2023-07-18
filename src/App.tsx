@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 
 import ProfilePage from "./pages/profile/index.tsx";
 import BigForm from "./pages/form/index.tsx";
+import { error } from "console";
 
 enum Gender {
   man = "man",
@@ -21,7 +22,7 @@ export type StateType = {
     sex: Gender;
   };
   step2: {
-    text: any;
+    text: [{value: string}];
     checkbox1: boolean;
     checkbox2: boolean;
     checkbox3: boolean;
@@ -44,8 +45,16 @@ export const StateContext = React.createContext<ContextType>({} as ContextType);
 
 function App() {
 
+  const initialState={
+    step2: { 
+      text: [{ value: '' }] 
+    }, 
+    modal: { 
+      active: false
+    }
+  }
 
-  const [state, setState] = useState<StateType>({ step2: { text: [{ value: '' }] }, modal: { active: false } } as StateType);
+  const [state, setState] = useState<StateType>(initialState as StateType);
 
   return (
     <StateContext.Provider value={{ state, setState }}>
